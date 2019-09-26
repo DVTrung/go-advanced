@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - dev
-    paths:
-      - '*'
-      - '!/docs/*'
 
 jobs:
   build-deploy:
