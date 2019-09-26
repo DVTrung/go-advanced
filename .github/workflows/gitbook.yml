@@ -7,7 +7,7 @@ on:
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - '*'
-      - '!doc/*'
+#       - '!doc/*'
 
 jobs:
   build-deploy:
