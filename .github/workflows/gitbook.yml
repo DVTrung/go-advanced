@@ -22,7 +22,8 @@ jobs:
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         PUBLISH_BRANCH: dev
-        PUBLISH_DIR: docs
+        PUBLISH_DOCS: docs
+        PUBLISH_RESOURCE: resource
       run: |
         REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
         cd .. && rm -rf $GITHUB_WORKSPACE/
@@ -33,8 +34,10 @@ jobs:
         COMMIT_MESSAGE="Automated generate and deployment gitbook: $(date -u) ${GITHUB_SHA}"
         npm install gitbook-cli -g;
         gitbook install;
-        gitbook build . $PUBLISH_DIR;
-        git add -f $PUBLISH_DIR
+        gitbook build . $PUBLISH_DOCS;
+        gitbook pdf . $PUBLISH_RESOURCE;
+        git add -f $PUBLISH_DOCS;
+        git add -f $PUBLISH_RESOURCE;
         git commit -m "${COMMIT_MESSAGE}"
         git push origin dev;
         # git checkout master;
