@@ -26,20 +26,21 @@ jobs:
         PUBLISH_DOCS: docs
         PUBLISH_RESOURCE: resource
       run: |
-        REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-        cd .. && rm -rf $GITHUB_WORKSPACE/
-        git clone $REPOSITORY_PATH && cd $GITHUB_WORKSPACE
-        git checkout dev
-        git config user.name "${GITHUB_ACTOR}";
-        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com";
-        COMMIT_MESSAGE="Automated generate and deployment gitbook: $(date -u) ${GITHUB_SHA}"
-        npm install gitbook-cli -g;
-        gitbook install;
-        gitbook build . $PUBLISH_DOCS;
-        gitbook pdf . $PUBLISH_RESOURCE;
-        git add -f $PUBLISH_DOCS;
-        git commit -m "${COMMIT_MESSAGE}"
-        git push origin dev;
+        echo "ok";
+        # REPOSITORY_PATH="https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        # cd .. && rm -rf $GITHUB_WORKSPACE/
+        # git clone $REPOSITORY_PATH && cd $GITHUB_WORKSPACE
+        # git checkout dev
+        # git config user.name "${GITHUB_ACTOR}";
+        # git config user.email "${GITHUB_ACTOR}@users.noreply.github.com";
+        # COMMIT_MESSAGE="Automated generate and deployment gitbook: $(date -u) ${GITHUB_SHA}"
+        # npm install gitbook-cli -g;
+        # gitbook install;
+        # gitbook build . $PUBLISH_DOCS;
+        # gitbook pdf . $PUBLISH_RESOURCE;
+        # git add -f $PUBLISH_DOCS;
+        # git commit -m "${COMMIT_MESSAGE}"
+        # git push origin dev;
         # git checkout master;
         # git merge origin/dev;
         # git push --progress --porcelain origin refs/heads/master:master;
