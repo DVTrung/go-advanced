@@ -4,8 +4,9 @@ on:
   push:
     branches:
       - dev
+    # file paths to consider in the event. Optional; defaults to all.
     paths:
-      - '!/docs/*'
+      - '!doc/*'
 
 jobs:
   build-deploy:
