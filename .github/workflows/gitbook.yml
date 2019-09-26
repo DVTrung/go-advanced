@@ -5,6 +5,7 @@ on:
     paths:
       - '*'
       - '!*.js'
+      - '!/docs/*'
     #     branches:
     #       - dev
     # file paths to consider in the event. Optional; defaults to all.
