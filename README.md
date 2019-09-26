@@ -1,5 +1,9 @@
 # Go Language Advanced Programming <sub>Test Github workflows on branchs and paths</sub>
 
+---
+OK
+---
+
 [![version](https://img.shields.io/badge/repo%20status-active-brightgreen)](https://github.com/zalopay-oss/go-advanced)
 [![version](https://img.shields.io/badge/version-1.3.0--release-blue)](https://github.com/zalopay-oss/go-advanced/tree/v1.3.0-release)
 [![version](https://img.shields.io/badge/contributors-5-blueviolet)](#tham-gia-phát-triển)
