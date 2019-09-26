@@ -6,8 +6,8 @@ on:
       - dev
     paths:
       - '*'
-      - '!docs/**'
-      - '!resource/**'
+      - '!docs'
+      - '!resource'
 
 jobs:
   build-deploy:
