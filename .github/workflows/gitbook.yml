@@ -2,8 +2,8 @@ name: github pages
 
 on:
   push:
-    branches:
-      - dev
+#     branches:
+#       - dev
     # file paths to consider in the event. Optional; defaults to all.
     paths:
       - '*'
