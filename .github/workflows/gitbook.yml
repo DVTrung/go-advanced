@@ -36,9 +36,7 @@ jobs:
           # git config user.email "${GITHUB_ACTOR}@users.noreply.github.com";
           # COMMIT_MESSAGE="Automated generate and deployment gitbook: $(date -u) ${GITHUB_SHA}"
           # npm install gitbook-cli -g;
-          # gitbook install;
           # gitbook build . $PUBLISH_DOCS;
-          # gitbook pdf . $PUBLISH_RESOURCE;
           # git add -f $PUBLISH_DOCS;
           # git commit -m "${COMMIT_MESSAGE}"
           # git push origin dev;
