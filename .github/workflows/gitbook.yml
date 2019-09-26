@@ -6,8 +6,7 @@ on:
       - dev
     paths:
       - '*'
-      - '!docs'
-      - '!resource'
+      - '!/docs/*'
 
 jobs:
   build-deploy:
@@ -38,7 +37,6 @@ jobs:
         gitbook build . $PUBLISH_DOCS;
         gitbook pdf . $PUBLISH_RESOURCE;
         git add -f $PUBLISH_DOCS;
-        git add -f $PUBLISH_RESOURCE;
         git commit -m "${COMMIT_MESSAGE}"
         git push origin dev;
         # git checkout master;
